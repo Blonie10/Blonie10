@@ -1,34 +1,112 @@
 <!doctype html>
+
 <html lang="pl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Błonie 10 — wina, smaki i spotkania</title>
   <style>
-    body { font-family: system-ui, sans-serif; margin:0; background:#F6F1EA; color:#222; }
-    header { padding:18px 24px; display:flex; justify-content:space-between; align-items:center; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,.06); position:sticky; top:0; }
-    .brand { font-weight:700; letter-spacing:.5px; }
-    .hero { min-height:70vh; display:grid; place-items:center; text-align:center; padding:32px; }
-    h1 { font-size: clamp(28px, 4vw, 48px); margin: 0 0 12px; }
-    p.lead { font-size: clamp(16px, 2.2vw, 20px); opacity:.85; max-width:720px; margin:0 auto 22px; }
-    .cta { display:inline-block; padding:12px 18px; border-radius:12px; border:1px solid #6C1E24; text-decoration:none; }
-    .cta--filled { background:#6C1E24; color:#fff; margin-right:8px; }
-    footer { padding:28px; text-align:center; font-size:14px; opacity:.8; }
+    body { margin:0; font-family: 'Inter', sans-serif; background:#F6F1EA; color:#222; }
+    header { position:sticky; top:0; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.1); padding:18px 24px; display:flex; justify-content:space-between; align-items:center; z-index:1000; }
+    header nav a { margin-left:16px; text-decoration:none; color:#222; font-weight:500; }
+    .hero { min-height:70vh; background:url('images/hero.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding:32px; }
+    .hero h1 { font-size:clamp(28px,5vw,52px); margin:0 0 12px; }
+    .hero p { font-size:clamp(16px,2.2vw,22px); max-width:720px; margin:0 auto 22px; }
+    .cta { display:inline-block; margin:6px; padding:12px 20px; border-radius:12px; border:1px solid #C6A15B; text-decoration:none; font-weight:600; }
+    .cta--filled { background:#6C1E24; border-color:#6C1E24; color:#fff; }
+    .section { padding:60px 20px; max-width:1200px; margin:0 auto; }
+    .section h2 { text-align:center; font-size:32px; margin-bottom:32px; font-family: 'Playfair Display', serif; }
+    .grid { display:grid; gap:24px; }
+    .grid-3 { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+    .card { background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.08); }
+    .card img { width:100%; height:200px; object-fit:cover; }
+    .card-body { padding:20px; }
+    footer { background:#222; color:#eee; text-align:center; padding:40px 20px; font-size:14px; }
+    footer a { color:#C6A15B; text-decoration:none; }
   </style>
 </head>
 <body>
   <header>
-    <div class="brand">Błonie 10</div>
-    <nav>Start · Oferta · Wydarzenia · Dom kultury · O nas · Kontakt</nav>
-  </header>
-  <main class="hero">
+    <div class="brand"><strong>Błonie 10</strong></div>
+    <nav>
+      <a href="#oferta">Oferta</a>
+      <a href="#wydarzenia">Wydarzenia</a>
+      <a href="#domkultury">Dom kultury</a>
+      <a href="#onas">O nas</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>  <section class="hero">
     <div>
       <h1>Błonie 10 — wina, smaki i spotkania</h1>
-      <p class="lead">Sklep z winem, który staje się miejscem rozmów, degustacji i kultury. Zapraszamy do Błonia!</p>
-      <a class="cta cta--filled" href="#">Sprawdź wydarzenia</a>
-      <a class="cta" href="#">Jak do nas trafić</a>
+      <p>Sklep z winem, który stał się miejscem rozmów, degustacji i kultury. Zapraszamy do Błonia!</p>
+      <a class="cta cta--filled" href="#wydarzenia">Sprawdź wydarzenia</a>
+      <a class="cta" href="#kontakt">Jak do nas trafić</a>
     </div>
-  </main>
-  <footer>© Błonie 10 • Strona w przygotowaniu</footer>
+  </section>  <section class="section" id="oferta">
+    <h2>Wina i smaki świata</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <img src="images/wino-czerwone.jpg" alt="Wino czerwone">
+        <div class="card-body">
+          <h3>Wina czerwone</h3>
+          <p>Aromatyczne i pełne smaku, z najlepszych winnic świata.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/wino-biale.jpg" alt="Wino białe">
+        <div class="card-body">
+          <h3>Wina białe</h3>
+          <p>Od lekkich i rześkich po bogate i kremowe.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/delikatesy.jpg" alt="Delikatesy">
+        <div class="card-body">
+          <h3>Delikatesy</h3>
+          <p>Wyjątkowe produkty spożywcze z całego świata.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <section class="section" id="wydarzenia">
+    <h2>Najbliższe wydarzenia</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <img src="images/event1.jpg" alt="Degustacja">
+        <div class="card-body">
+          <h3>Degustacja win włoskich</h3>
+          <p>12 września • Spotkanie przy kieliszku wina z Toskanii.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/event2.jpg" alt="Warsztaty">
+        <div class="card-body">
+          <h3>Warsztaty serowe</h3>
+          <p>20 września • Nauka o serach i winnych połączeniach.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/event3.jpg" alt="Koncert">
+        <div class="card-body">
+          <h3>Koncert jazzowy</h3>
+          <p>28 września • Nastrojowy wieczór z muzyką na żywo.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <section class="section" id="domkultury">
+    <h2>Dom kultury dla dorosłych</h2>
+    <p style="max-width:720px;margin:0 auto;text-align:center;">Błonie 10 to coś więcej niż sklep. To przestrzeń spotkań, rozmów i wspólnego odkrywania kultury. Dołącz do naszego klubu i współtwórz wyjątkowe wydarzenia.</p>
+  </section>  <section class="section" id="onas">
+    <h2>O nas</h2>
+    <p style="max-width:720px;margin:0 auto;text-align:center;">Powstaliśmy z pasji do wina i dobrej kuchni. Z biegiem czasu staliśmy się miejscem, gdzie ludzie spotykają się, by rozmawiać, smakować i wspólnie przeżywać kulturę.</p>
+  </section>  <section class="section" id="kontakt">
+    <h2>Kontakt</h2>
+    <p style="text-align:center;">📍 Błonie, ul. Przykładowa 10<br/>☎️ 123 456 789<br/>✉️ kontakt@blonie10.pl</p>
+    <p style="text-align:center;margin-top:20px;">Godziny otwarcia: Pon–Sob 11:00–20:00</p>
+    <div style="margin-top:30px;text-align:center;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.198..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>  <footer>
+    © 2025 Błonie 10 • Wina i kultura • <a href="#">Polityka prywatności</a>
+  </footer>
 </body>
 </html>
